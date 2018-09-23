@@ -21,6 +21,9 @@ const mapState = (state, ownProps) => {
 }
 
 const EventDetailedPage = ({event}) => {
+  if(!event) {
+    return <div>Loading...</div>
+  }
   return (
     <Grid>
       <Grid.Column width={10}>
